@@ -36,8 +36,10 @@ class ScheduledGameItemView : ContentCardView {
             broadcasters.text = game.broadcasters
         }
 
-        home_team_name.text = context.getString(R.string.live_score_team_name, game.homeCity, game.homeName)
-        away_team_name.text = context.getString(R.string.live_score_team_name, game.awayCity, game.awayName)
+        home_team_name.text =
+            context.getString(R.string.live_score_team_name, game.homeCity, game.homeName)
+        away_team_name.text =
+            context.getString(R.string.live_score_team_name, game.awayCity, game.awayName)
 
         home_team_icon.setTeam(game.homeAbbrev, Color.parseColor(game.homeColor))
         away_team_icon.setTeam(game.awayAbbrev, Color.parseColor(game.awayColor))

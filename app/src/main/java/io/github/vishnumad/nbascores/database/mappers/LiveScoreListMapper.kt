@@ -8,7 +8,7 @@ import javax.inject.Inject
 
 @Reusable
 class LiveScoreListMapper @Inject constructor(
-        private val liveScoreMapper: LiveScoreMapper
+    private val liveScoreMapper: LiveScoreMapper
 ) : Function<List<GameReadModel>, List<LiveScore>> {
 
     override fun apply(models: List<GameReadModel>): List<LiveScore> {

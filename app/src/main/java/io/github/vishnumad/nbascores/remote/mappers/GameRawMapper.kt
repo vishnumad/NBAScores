@@ -11,26 +11,26 @@ import javax.inject.Inject
 
 @Reusable
 class GameRawMapper @Inject constructor(
-        private val teamScoreMapper: GameTeamScoreRawMapper,
-        private val dateTimeHelper: DateTimeHelper
+    private val teamScoreMapper: GameTeamScoreRawMapper,
+    private val dateTimeHelper: DateTimeHelper
 ) : Function<GameRaw, DbGame> {
 
     override fun apply(game: GameRaw): DbGame {
         return DbGame(
-                gameId = game.gameID,
-                startTimeUTC = game.startTimeUTC,
-                startDate = game.startDateEastern,
-                seasonYear = game.seasonYear,
-                seasonStage = game.seasonStage,
-                isStartTimeTBD = game.isStartTimeTBD,
-                status = game.status,
-                gameClock = game.gameClock,
-                arena = game.arena.name,
-                arenaCity = game.arena.city,
-                broadcasters = getBroadcasters(game.watch.broadcast.broadcasters),
-                homeTeam = teamScoreMapper.apply(game.homeTeamScore),
-                awayTeam = teamScoreMapper.apply(game.awayTeamScore),
-                label = getLabel(game.status, game)
+            gameId = game.gameID,
+            startTimeUTC = game.startTimeUTC,
+            startDate = game.startDateEastern,
+            seasonYear = game.seasonYear,
+            seasonStage = game.seasonStage,
+            isStartTimeTBD = game.isStartTimeTBD,
+            status = game.status,
+            gameClock = game.gameClock,
+            arena = game.arena.name,
+            arenaCity = game.arena.city,
+            broadcasters = getBroadcasters(game.watch.broadcast.broadcasters),
+            homeTeam = teamScoreMapper.apply(game.homeTeamScore),
+            awayTeam = teamScoreMapper.apply(game.awayTeamScore),
+            label = getLabel(game.status, game)
         )
     }
 

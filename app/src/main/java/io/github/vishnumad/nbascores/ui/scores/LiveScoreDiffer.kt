@@ -3,7 +3,8 @@ package io.github.vishnumad.nbascores.ui.scores
 import io.github.vishnumad.nbascores.data.models.LiveScore
 import io.github.vishnumad.nbascores.utils.DiffCallback
 
-class LiveScoreDiffer(old: List<LiveScore>, new: List<LiveScore>) : DiffCallback<LiveScore>(old, new) {
+class LiveScoreDiffer(old: List<LiveScore>, new: List<LiveScore>) :
+    DiffCallback<LiveScore>(old, new) {
 
     enum class Payload { LABEL, HOME_SCORE, AWAY_SCORE }
 

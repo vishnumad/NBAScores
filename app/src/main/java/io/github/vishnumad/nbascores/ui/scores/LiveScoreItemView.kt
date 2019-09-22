@@ -15,7 +15,8 @@ class LiveScoreItemView : ContentCardView {
 
     constructor(context: Context) : this(context, null)
     constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, 0)
-    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
+    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int)
+            : super(context, attrs, defStyleAttr)
 
     private val mainLabel: TextView
     private val secondaryLabel: TextView
@@ -55,10 +56,12 @@ class LiveScoreItemView : ContentCardView {
             awayScore.text = score.awayScore
         }
 
-        homeName.text = context.getString(R.string.live_score_team_name, score.homeCity, score.homeName)
+        homeName.text =
+            context.getString(R.string.live_score_team_name, score.homeCity, score.homeName)
         homeIcon.setTeam(score.homeAbbrev, Color.parseColor(score.homeColor))
 
-        awayName.text = context.getString(R.string.live_score_team_name, score.awayCity, score.awayName)
+        awayName.text =
+            context.getString(R.string.live_score_team_name, score.awayCity, score.awayName)
         awayIcon.setTeam(score.awayAbbrev, Color.parseColor(score.awayColor))
     }
 

@@ -19,7 +19,8 @@ class StandingsCardView : ContentCardView {
 
     constructor(context: Context) : this(context, null)
     constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, 0)
-    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
+    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int)
+            : super(context, attrs, defStyleAttr)
 
     private val titleView: TextView
     private val listView: ListView
@@ -63,9 +64,10 @@ class StandingsCardView : ContentCardView {
 
         override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
             val view = convertView as? TeamStandingItemView
-                    ?: TeamStandingItemView(parent.context)
+                ?: TeamStandingItemView(parent.context)
 
-            val item = getItem(position) ?: throw Exception("No item at position: $position in adapter")
+            val item =
+                getItem(position) ?: throw Exception("No item at position: $position in adapter")
 
             view.bind(item)
             return view

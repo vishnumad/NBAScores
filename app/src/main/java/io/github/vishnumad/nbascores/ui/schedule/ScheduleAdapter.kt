@@ -5,7 +5,7 @@ import androidx.recyclerview.widget.RecyclerView
 import io.github.vishnumad.nbascores.data.models.ScheduledGame
 
 class ScheduleAdapter(val clickListener: (ScheduledGame) -> Unit) :
-        RecyclerView.Adapter<ScheduleAdapter.ScheduleViewHolder>() {
+    RecyclerView.Adapter<ScheduleAdapter.ScheduleViewHolder>() {
 
     private val schedule = mutableListOf<ScheduledGame>()
 
@@ -34,7 +34,7 @@ class ScheduleAdapter(val clickListener: (ScheduledGame) -> Unit) :
     }
 
     class ScheduleViewHolder(val item: ScheduledGameItemView, listener: (Int) -> Unit) :
-            RecyclerView.ViewHolder(item) {
+        RecyclerView.ViewHolder(item) {
         init {
             item.rootView.setOnClickListener { listener(adapterPosition) }
         }

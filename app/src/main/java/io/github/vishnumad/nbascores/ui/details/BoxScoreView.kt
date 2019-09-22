@@ -17,7 +17,8 @@ class BoxScoreView : ContentCardView {
 
     constructor(context: Context) : this(context, null)
     constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, 0)
-    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
+    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int)
+            : super(context, attrs, defStyleAttr)
 
     private val teamNameView: TextView
     private val listView: ListView
@@ -55,13 +56,13 @@ class BoxScoreView : ContentCardView {
         adapter.notifyDataSetChanged()
     }
 
-    private inner class BoxScoreAdapter(context: Context) : ArrayAdapter<PlayerStatline>(context, 0) {
+    private inner class BoxScoreAdapter(context: Context) :
+        ArrayAdapter<PlayerStatline>(context, 0) {
 
         override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-            val view = convertView as? PlayerStatlineView
-                    ?: PlayerStatlineView(context)
-
-            val item = getItem(position) ?: throw Exception("No item at position $position in adapter")
+            val view = convertView as? PlayerStatlineView ?: PlayerStatlineView(context)
+            val item = getItem(position)
+                ?: throw Exception("No item at position $position in adapter")
 
             view.bind(item)
             return view

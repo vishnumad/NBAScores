@@ -12,18 +12,18 @@ class TeamStatlineMapper @Inject constructor() : Function<TeamStats, TeamStatlin
 
     override fun apply(stats: TeamStats): TeamStatline {
         return TeamStatline(
-                fg = pctString(stats.fgm, stats.fga),
-                threePt = pctString(stats.tpm, stats.tpa),
-                ft = pctString(stats.ftm, stats.fta),
-                oreb = "${stats.oreb}",
-                dreb = "${stats.dreb}",
-                reb = "${stats.reb}",
-                ast = "${stats.ast}",
-                stl = "${stats.stl}",
-                blk = "${stats.blk}",
-                to = "${stats.tov}",
-                pf = "${stats.pf}",
-                pts = "${calculatePts(stats.ftm, stats.tpm, stats.fgm)}"
+            fg = pctString(stats.fgm, stats.fga),
+            threePt = pctString(stats.tpm, stats.tpa),
+            ft = pctString(stats.ftm, stats.fta),
+            oreb = "${stats.oreb}",
+            dreb = "${stats.dreb}",
+            reb = "${stats.reb}",
+            ast = "${stats.ast}",
+            stl = "${stats.stl}",
+            blk = "${stats.blk}",
+            to = "${stats.tov}",
+            pf = "${stats.pf}",
+            pts = "${calculatePts(stats.ftm, stats.tpm, stats.fgm)}"
         )
     }
 

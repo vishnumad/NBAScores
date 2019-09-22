@@ -8,7 +8,8 @@ import io.reactivex.functions.BiFunction
 import javax.inject.Inject
 
 @Reusable
-class TeamsInfoMapper @Inject constructor() : BiFunction<List<DbTeam>, List<DbTeamConfig>, TeamsInfo> {
+class TeamsInfoMapper @Inject constructor() :
+    BiFunction<List<DbTeam>, List<DbTeamConfig>, TeamsInfo> {
 
     override fun apply(teams: List<DbTeam>, configs: List<DbTeamConfig>): TeamsInfo {
         return TeamsInfo(teams, configs)

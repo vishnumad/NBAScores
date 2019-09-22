@@ -10,7 +10,8 @@ class StandingsView : NestedScrollView {
 
     constructor(context: Context) : this(context, null)
     constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, 0)
-    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
+    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int)
+            : super(context, attrs, defStyleAttr)
 
     private val easternStandings = StandingsCardView(context)
     private val westernStandings = StandingsCardView(context)
@@ -20,7 +21,8 @@ class StandingsView : NestedScrollView {
         westernStandings.setTitle("Western Conference")
 
         val scrollViewChild = LinearLayout(context)
-        scrollViewChild.layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
+        scrollViewChild.layoutParams =
+            LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
         scrollViewChild.orientation = LinearLayout.VERTICAL
 
         scrollViewChild.addView(easternStandings)

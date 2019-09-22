@@ -11,11 +11,11 @@ class GamePeriodRawMapper @Inject constructor() : Function<GamePeriodRaw, GamePe
 
     override fun apply(period: GamePeriodRaw): GamePeriod {
         return GamePeriod(
-                current = period.current,
-                type = period.type,
-                maxRegular = period.maxRegular,
-                isHalftime = period.isHalftime,
-                isEndOfPeriod = period.isEndOfPeriod
+            current = period.current,
+            type = period.type,
+            maxRegular = period.maxRegular,
+            isHalftime = period.isHalftime,
+            isEndOfPeriod = period.isEndOfPeriod
         )
     }
 }

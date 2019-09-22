@@ -8,7 +8,7 @@ import javax.inject.Inject
 
 @Reusable
 class ScoreboardRawMapper @Inject constructor(
-        private val gameMapper: GameRawMapper
+    private val gameMapper: GameRawMapper
 ) : Function<ScoreboardRaw, List<DbGame>> {
 
     override fun apply(scoreboard: ScoreboardRaw): List<DbGame> {

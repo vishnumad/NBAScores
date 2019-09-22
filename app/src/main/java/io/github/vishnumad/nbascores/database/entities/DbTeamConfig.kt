@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class DbTeamConfig(
-        @PrimaryKey val teamID: Long,
-        val tricode: String,
-        val primaryColor: String
+    @PrimaryKey val teamID: Long,
+    val tricode: String,
+    val primaryColor: String
 )

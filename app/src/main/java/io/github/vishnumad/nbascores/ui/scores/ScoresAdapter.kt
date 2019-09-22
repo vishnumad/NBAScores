@@ -5,7 +5,7 @@ import androidx.recyclerview.widget.RecyclerView
 import io.github.vishnumad.nbascores.data.models.LiveScore
 
 class ScoresAdapter(val clickListener: (LiveScore) -> Unit) :
-        RecyclerView.Adapter<ScoresAdapter.ScoresViewHolder>() {
+    RecyclerView.Adapter<ScoresAdapter.ScoresViewHolder>() {
 
     private val liveScores = ArrayList<LiveScore>()
 
@@ -21,7 +21,11 @@ class ScoresAdapter(val clickListener: (LiveScore) -> Unit) :
     }
 
     @Suppress("UNCHECKED_CAST")
-    override fun onBindViewHolder(holder: ScoresViewHolder, position: Int, payloads: MutableList<Any>) {
+    override fun onBindViewHolder(
+        holder: ScoresViewHolder,
+        position: Int,
+        payloads: MutableList<Any>
+    ) {
         if (payloads.isEmpty()) {
             onBindViewHolder(holder, position)
         } else {
@@ -36,7 +40,8 @@ class ScoresAdapter(val clickListener: (LiveScore) -> Unit) :
         }
     }
 
-    class ScoresViewHolder(val item: LiveScoreItemView, listener: (Int) -> Unit) : RecyclerView.ViewHolder(item) {
+    class ScoresViewHolder(val item: LiveScoreItemView, listener: (Int) -> Unit) :
+        RecyclerView.ViewHolder(item) {
         init {
             item.rootView.setOnClickListener { listener(adapterPosition) }
         }

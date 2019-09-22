@@ -3,8 +3,8 @@ package io.github.vishnumad.nbascores.utils
 import androidx.recyclerview.widget.DiffUtil
 
 abstract class DiffCallback<T>(
-        private val oldItems: List<T>,
-        private val newItems: List<T>
+    private val oldItems: List<T>,
+    private val newItems: List<T>
 ) : DiffUtil.Callback() {
 
     abstract fun areItemsSame(oldItem: T, newItem: T): Boolean

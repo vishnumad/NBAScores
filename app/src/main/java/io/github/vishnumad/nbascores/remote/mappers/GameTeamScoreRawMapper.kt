@@ -11,13 +11,13 @@ class GameTeamScoreRawMapper @Inject constructor() : Function<GameTeamScoreRaw, 
 
     override fun apply(teamScore: GameTeamScoreRaw): GameTeamScore {
         return GameTeamScore(
-                teamID = teamScore.teamID,
-                tricode = teamScore.tricode,
-                score = teamScore.score,
-                losses = teamScore.loss,
-                wins = teamScore.win,
-                seriesLosses = teamScore.seriesLoss,
-                seriesWins = teamScore.seriesWin
+            teamID = teamScore.teamID,
+            tricode = teamScore.tricode,
+            score = teamScore.score,
+            losses = teamScore.loss,
+            wins = teamScore.win,
+            seriesLosses = teamScore.seriesLoss,
+            seriesWins = teamScore.seriesWin
         )
     }
 }

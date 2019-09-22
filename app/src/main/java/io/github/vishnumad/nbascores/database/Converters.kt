@@ -17,6 +17,5 @@ class Converters {
     @TypeConverter
     fun playerStatlineFromJson(statlinesJson: String): List<PlayerStatline>? {
         return Injector.get().playerStatlineJsonAdapter().fromJson(statlinesJson)
-//            ?: throw IllegalArgumentException("Invalid Player Statline JSON: $statlinesJson")
     }
 }

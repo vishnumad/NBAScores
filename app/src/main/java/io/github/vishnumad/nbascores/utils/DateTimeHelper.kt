@@ -10,7 +10,7 @@ import javax.inject.Inject
 import javax.inject.Named
 
 class DateTimeHelper @Inject constructor(
-        @Named(LOCAL_ZONE) private val localZone: ZoneId
+    @Named(LOCAL_ZONE) private val localZone: ZoneId
 ) {
 
     private val shortTimeFormatter = DateTimeFormatter.ofPattern("h:mm a")

@@ -14,7 +14,8 @@ class NoScrollListView : ListView {
 
     constructor(context: Context) : this(context, null)
     constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, 0)
-    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
+    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int)
+            : super(context, attrs, defStyleAttr)
 
     private var prevCount = 0
 
@@ -26,8 +27,8 @@ class NoScrollListView : ListView {
     }
 
     override fun onDraw(canvas: Canvas?) {
-        /* Resize the height of the ListView to show all items without scrolling
-          * We assume that all the ListView items are of equal height */
+        // Resize the height of the ListView to show all items without scrolling.
+        // We assume that all the ListView items are of equal height
         val numItems = count
         if (numItems != prevCount) {
             prevCount = numItems

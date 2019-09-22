@@ -9,32 +9,31 @@ import javax.inject.Inject
 
 @Reusable
 class ScheduledGameMapper @Inject constructor(
-        private val dateTimeHelper: DateTimeHelper
+    private val dateTimeHelper: DateTimeHelper
 ) : Function<GameReadModel, ScheduledGame> {
 
     override fun apply(model: GameReadModel): ScheduledGame {
         return ScheduledGame(
-                gameId = model.game.gameId,
-                seasonYear = model.game.seasonYear,
-                startTime = getStartTime(model.game.startTimeUTC, model.game.isStartTimeTBD),
-                arena = "${model.game.arena}, ${model.game.arenaCity}",
-                broadcasters = model.game.broadcasters,
-                awayAbbrev = model.game.awayTeam.tricode,
-                awayName = model.awayName,
-                awayCity = model.awayCity,
-                awayColor = model.awayColor,
-                homeAbbrev = model.game.homeTeam.tricode,
-                homeName = model.homeName,
-                homeCity = model.homeCity,
-                homeColor = model.homeColor
+            gameId = model.game.gameId,
+            seasonYear = model.game.seasonYear,
+            startTime = getStartTime(model.game.startTimeUTC, model.game.isStartTimeTBD),
+            arena = "${model.game.arena}, ${model.game.arenaCity}",
+            broadcasters = model.game.broadcasters,
+            awayAbbrev = model.game.awayTeam.tricode,
+            awayName = model.awayName,
+            awayCity = model.awayCity,
+            awayColor = model.awayColor,
+            homeAbbrev = model.game.homeTeam.tricode,
+            homeName = model.homeName,
+            homeCity = model.homeCity,
+            homeColor = model.homeColor
         )
     }
 
     private fun getStartTime(time: String, isTBD: Boolean): String {
-        return if (isTBD) {
-            "TBD"
-        } else {
-            dateTimeHelper.convertUTCtoLocal(time)
+        when {
+            isTBD -> return "TBD"
+            else -> return dateTimeHelper.convertUTCtoLocal(time)
         }
     }
 }

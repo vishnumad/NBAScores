@@ -8,7 +8,7 @@ import javax.inject.Inject
 
 @Reusable
 class ScheduledGameListMapper @Inject constructor(
-        private val scheduledGameMapper: ScheduledGameMapper
+    private val scheduledGameMapper: ScheduledGameMapper
 ) : Function<List<GameReadModel>, List<ScheduledGame>> {
 
     override fun apply(models: List<GameReadModel>): List<ScheduledGame> {

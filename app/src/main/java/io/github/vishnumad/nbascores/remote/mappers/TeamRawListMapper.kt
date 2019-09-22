@@ -15,15 +15,15 @@ class TeamRawListMapper @Inject constructor() : BiFunction<String, List<TeamRaw>
 
     private fun toLocalModel(seasonYear: String, team: TeamRaw): DbTeam {
         return DbTeam(
-                teamID = team.teamId,
-                city = team.city,
-                confName = team.confName,
-                divName = team.divName,
-                fullName = team.fullName,
-                nickname = team.nickname,
-                tricode = team.tricode,
-                urlName = team.urlName,
-                seasonYear = seasonYear
+            teamID = team.teamId,
+            city = team.city,
+            confName = team.confName,
+            divName = team.divName,
+            fullName = team.fullName,
+            nickname = team.nickname,
+            tricode = team.tricode,
+            urlName = team.urlName,
+            seasonYear = seasonYear
         )
     }
 }

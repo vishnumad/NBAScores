@@ -14,7 +14,7 @@ class RxDiffUtil {
          * Usage: observable.compose(RxDiffUtil.calculateDiff(BiFunction { old, new -> ... }))
          */
         fun <T> calculateDiff(
-                differ: BiFunction<List<T>, List<T>, DiffUtil.Callback>
+            differ: BiFunction<List<T>, List<T>, DiffUtil.Callback>
         ): ObservableTransformer<List<T>, Pair<List<T>, DiffUtil.DiffResult>> {
 
             val seed = Pair<List<T>, DiffUtil.DiffResult?>(emptyList(), null)
@@ -27,7 +27,9 @@ class RxDiffUtil {
                         return@scan Pair(newItems, result)
                     }
                     .skip(1) // Ignore the seed pair
-                    .map { (list, diff) -> Pair(list, diff!!) } // We know the diff will never be null
+                    .map { (list, diff) ->
+                        Pair(list, diff!!) // We know the diff will never be null
+                    }
             }
         }
     }
