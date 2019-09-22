@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:parentTag="android.widget.LinearLayout"
+        tools:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+            android:id="@+id/error_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:paddingEnd="32dp"
+            android:paddingStart="32dp"
+            android:textSize="16sp"
+            tools:text="Something truly awful, horrendous, despicable happened and we are unable to show you your data, please try again later" />
+
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/error_reload_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="16dp"
+            app:strokeColor="@color/button_outline"
+            android:text="@string/error_reload_button_text"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+</merge>

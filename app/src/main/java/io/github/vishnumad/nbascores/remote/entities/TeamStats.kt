@@ -1,0 +1,31 @@
+package io.github.vishnumad.nbascores.remote.entities
+
+data class TeamStats(
+        val fga: Int,
+        val fgm: Int,
+        val tpa: Int,
+        val tpm: Int,
+        val fta: Int,
+        val ftm: Int,
+        val oreb: Int,
+        val dreb: Int,
+        val reb: Int,
+        val ast: Int,
+        val stl: Int,
+        val blk: Int,
+        val pf: Int,
+        val tov: Int,
+        val fbpts: Int,
+        val fbptsa: Int,
+        val fbptsm: Int,
+        val pip: Int,
+        val pipa: Int,
+        val pipm: Int,
+        val ble: Int,
+        val bpts: Int,
+        val tf: Int,
+        val scp: Int,
+        val tmreb: Int,
+        val tmtov: Int,
+        val potov: Int
+)

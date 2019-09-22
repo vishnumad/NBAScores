@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/nav_scores"
+            android:icon="@drawable/nav_icon_outline_scores"
+            android:title="@string/scores_item_label" />
+    <item
+            android:id="@+id/nav_standings"
+            android:icon="@drawable/nav_icon_outline_standings"
+            android:title="@string/standings_item_label" />
+    <item
+            android:id="@+id/nav_schedule"
+            android:icon="@drawable/nav_icon_outline_schedule"
+            android:title="@string/schedule_item_label" />
+</menu>

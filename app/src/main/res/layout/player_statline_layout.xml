@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="horizontal"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <TextView
+            android:id="@+id/position"
+            android:textAlignment="center"
+            tools:text="PG"
+            android:textSize="12sp"
+            android:textColor="@color/secondary_text"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content" />
+
+    <TextView
+            android:id="@+id/name"
+            android:textSize="12sp"
+            tools:text="S. Gilgeous-Alexander"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content" />
+
+    <TextView
+            android:id="@+id/minutes"
+            android:textAlignment="center"
+            tools:text="29"
+            android:textSize="12sp"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content" />
+
+    <TextView
+            android:id="@+id/field_goals"
+            android:textAlignment="center"
+            tools:text="5-13"
+            android:textSize="12sp"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content" />
+
+    <TextView
+            android:id="@+id/three_pointers"
+            android:textAlignment="center"
+            tools:text="1-6"
+            android:textSize="12sp"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content" />
+
+    <TextView
+            android:id="@+id/free_throws"
+            tools:text="1-1"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content" />
+
+    <TextView
+            android:id="@+id/offensive_rebounds"
+            tools:text="0"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+
+    <TextView
+            android:id="@+id/rebounds"
+            tools:text="4"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+
+    <TextView
+            android:id="@+id/assists"
+            tools:text="5"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+
+    <TextView
+            android:id="@+id/steals"
+            tools:text="2"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+
+    <TextView
+            android:id="@+id/blocks"
+            tools:text="0"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+
+    <TextView
+            android:id="@+id/turnovers"
+            tools:text="4"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+
+    <TextView
+            android:id="@+id/fouls"
+            tools:text="3"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+
+    <TextView
+            android:id="@+id/plus_minus"
+            tools:text="+9"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+
+    <TextView
+            android:id="@+id/points"
+            tools:text=""
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+
+</LinearLayout>

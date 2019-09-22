@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+    <!-- Away DbTeam -->
+    <io.github.vishnumad.nbascores.ui.common.TeamIcon
+            android:id="@+id/away_team_icon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cardCornerRadius="8dp"
+            tools:teamAbbrev="MIN"
+            tools:layout_editor_absoluteY="44dp" />
+
+    <TextView
+            android:id="@+id/away_team_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/away_team_icon"
+            app:layout_constraintEnd_toStartOf="@id/away_team_score"
+            app:layout_constraintStart_toEndOf="@id/away_team_icon"
+            app:layout_constraintTop_toTopOf="@id/away_team_icon"
+            android:lines="2"
+            android:textSize="12sp"
+            tools:text="Minnesota\nTimberwolves" />
+
+    <TextView
+            android:id="@+id/at_symbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/away_team_icon"
+            app:layout_constraintEnd_toStartOf="@id/vertical_separator"
+            app:layout_constraintTop_toTopOf="@id/away_team_icon"
+            android:fontFeatureSettings="tnum"
+            android:textSize="16sp"
+            android:text="@string/at_symbol"
+            android:textStyle="bold" />
+
+    <!-- Home DbTeam -->
+    <io.github.vishnumad.nbascores.ui.common.TeamIcon
+            android:id="@+id/home_team_icon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/away_team_icon"
+            app:cardCornerRadius="8dp"
+            tools:teamAbbrev="MEM" />
+
+    <TextView
+            android:id="@+id/home_team_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/home_team_icon"
+            app:layout_constraintStart_toEndOf="@id/home_team_icon"
+            app:layout_constraintTop_toTopOf="@id/home_team_icon"
+            android:lines="2"
+            android:textSize="12sp"
+            tools:text="Memphis\nGrizzlies" />
+
+    <View
+            android:id="@+id/vertical_separator"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/home_team_icon"
+            app:layout_constraintEnd_toStartOf="@id/start_time"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/button_outline" />
+
+    <TextView
+            android:id="@+id/start_time"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            app:layout_constraintBottom_toTopOf="@+id/game_location"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:paddingStart="8dp"
+            android:textSize="12sp"
+            tools:text="10:30 PM CDT" />
+
+    <TextView
+            android:id="@+id/game_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            app:layout_constraintBottom_toBottomOf="@id/home_team_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/vertical_separator"
+            app:layout_constraintTop_toBottomOf="@+id/start_time"
+            android:textColor="@color/secondary_text"
+            android:textSize="12sp"
+            android:paddingStart="8dp"
+            tools:text="American Airlines Center, Dallas" />
+
+    <ImageView
+            android:id="@+id/broadcasters_icon"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            app:layout_constraintBottom_toBottomOf="@id/broadcasters"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/broadcasters"
+            android:tint="@color/secondary_text"
+            android:src="@drawable/ic_broadcasters_black_24dp" />
+
+    <TextView
+            android:id="@+id/broadcasters"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/broadcasters_icon"
+            app:layout_constraintTop_toBottomOf="@id/home_team_icon"
+            android:textColor="@color/secondary_text"
+            android:textSize="12sp"
+            tools:text="ESPN, NBA TV, Fox Sports NorthEast, Some Other Broadcaster, 105.7 FM BLAH" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

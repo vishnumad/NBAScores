@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+    <io.github.vishnumad.nbascores.ui.common.TeamIcon
+            android:id="@+id/away_team_icon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cardCornerRadius="8dp" />
+
+    <TextView
+            android:id="@+id/away_team_score"
+            android:layout_width="45dp"
+            android:textAlignment="viewStart"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/away_team_icon"
+            app:layout_constraintStart_toEndOf="@id/away_team_icon"
+            app:layout_constraintTop_toTopOf="@id/away_team_icon"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="145" />
+
+    <TextView
+            android:id="@+id/label"
+            android:textSize="12sp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/home_team_score"
+            app:layout_constraintStart_toEndOf="@id/away_team_score"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textAlignment="center"
+            tools:text="Halftime" />
+
+    <TextView
+            android:id="@+id/home_team_score"
+            android:layout_width="45dp"
+            android:textAlignment="viewEnd"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/home_team_icon"
+            app:layout_constraintEnd_toStartOf="@id/home_team_icon"
+            app:layout_constraintTop_toTopOf="@id/home_team_icon"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            tools:text="119" />
+
+    <io.github.vishnumad.nbascores.ui.common.TeamIcon
+            android:id="@+id/home_team_icon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cardCornerRadius="8dp" />
+
+</merge>

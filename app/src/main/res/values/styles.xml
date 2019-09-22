@@ -1,0 +1,59 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
+
+        <!-- Window Background-->
+        <item name="windowBackgroundColor">@color/window_background</item>
+        <item name="android:windowBackground">@color/window_background</item>
+        <!-- Text Color-->
+        <item name="android:textColorPrimary">@color/main_text</item>
+        <item name="android:textColorSecondary">@color/main_text</item>
+        <item name="android:textColorTertiary">@color/main_text</item>
+        <item name="primaryTextColor">@color/main_text</item>
+        <item name="secondaryTextColor">@color/main_text</item>
+    </style>
+
+    <!-- Bottom Navigation Bar -->
+    <style name="Widget.NBAScores.BottomNavigation"
+           parent="@style/Widget.MaterialComponents.BottomNavigationView.Colored">
+
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="itemTextAppearanceActive">@style/TextAppearance.NBAScores.BottomNavigationView.Active</item>
+        <item name="itemTextAppearanceInactive">@style/TextAppearance.NBAScores.BottomNavigationView</item>
+        <item name="labelVisibilityMode">auto</item>
+        <item name="android:theme">@style/ThemeOverlay.MaterialComponents.Dark</item>
+    </style>
+
+    <style name="TextAppearance.NBAScores.BottomNavigationView"
+           parent="@style/Widget.MaterialComponents.BottomNavigationView.Colored">
+
+        <item name="android:textColor">@color/main_text</item>
+    </style>
+
+    <style name="TextAppearance.NBAScores.BottomNavigationView.Active">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- DatePickerDialog -->
+    <style name="DatePickerDialog" parent="Theme.AppCompat.Dialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/card_background</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowBackground">@drawable/dialog_background</item>
+
+        <!-- Window Background-->
+        <!--<item name="windowBackgroundColor">@color/window_background</item>-->
+        <!--<item name="android:windowBackground">@color/window_background</item>-->
+
+        <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button.TextButton</item>
+    </style>
+
+</resources>

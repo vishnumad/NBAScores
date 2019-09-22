@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:orientation="horizontal">
+
+
+    <TextView
+            android:id="@+id/team_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="9"
+            android:textAlignment="viewStart"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:text="@string/standings_header_team"/>
+
+    <TextView
+            android:id="@+id/win_loss"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:text="@string/standings_header_record"/>
+
+    <TextView
+            android:id="@+id/win_pct"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textStyle="bold"
+            android:textAlignment="viewEnd"
+            android:textSize="12sp"
+            android:text="@string/standings_header_w_pct"/>
+
+    <TextView
+            android:id="@+id/games_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textStyle="bold"
+            android:textAlignment="viewEnd"
+            android:textSize="12sp"
+            android:text="@string/standings_header_games_back"/>
+
+</LinearLayout>

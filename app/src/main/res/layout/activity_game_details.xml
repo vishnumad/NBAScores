@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.details.GameDetailsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+            app:elevation="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/gamedetails_toolbar"
+                app:title=" "
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize" />
+
+        <io.github.vishnumad.nbascores.ui.details.DetailScoreHeaderView
+                android:id="@+id/detail_score_header"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <io.github.vishnumad.nbascores.ui.common.PageContent
+            android:id="@+id/page_content"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <io.github.vishnumad.nbascores.ui.common.ErrorView
+                android:id="@+id/error_view"
+                android:layout_marginBottom="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        <io.github.vishnumad.nbascores.ui.common.LoadingSpinnerView
+                android:id="@+id/loading_view"
+                android:layout_marginBottom="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        <io.github.vishnumad.nbascores.ui.details.GameDetailsView
+                android:id="@+id/details_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+    </io.github.vishnumad.nbascores.ui.common.PageContent>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

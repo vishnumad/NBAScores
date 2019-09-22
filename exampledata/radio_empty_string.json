@@ -1,0 +1,551 @@
+{
+    "sports_content": {
+        "sports_meta": {
+            "date_time": "20190422 2105",
+            "season_meta": {
+                "calendar_date": "20190422",
+                "season_year": "2018",
+                "stats_season_year": "2018",
+                "stats_season_id": "42018",
+                "stats_season_stage": "4",
+                "roster_season_year": "2018",
+                "schedule_season_year": "2018",
+                "standings_season_year": "2018",
+                "season_id": "42018",
+                "display_year": "2019-18",
+                "display_season": "Post Season",
+                "season_stage": "4",
+                "league_id": "00"
+            },
+            "next": {
+                "url": "http://data.nba.com/data/5s/json/cms/noseason/scoreboard/20190423/games.json"
+            }
+        },
+        "games": {
+            "game": [
+                {
+                    "id": "0041800115",
+                    "game_url": "20190423/ORLTOR",
+                    "season_id": "42018",
+                    "date": "20190423",
+                    "time": "1900",
+                    "arena": "Scotiabank Arena",
+                    "city": "Toronto",
+                    "state": "ON",
+                    "country": "Canada",
+                    "home_start_date": "20190423",
+                    "home_start_time": "1900",
+                    "visitor_start_date": "20190423",
+                    "visitor_start_time": "1900",
+                    "previewAvailable": "1",
+                    "recapAvailable": "0",
+                    "notebookAvailable": "0",
+                    "tnt_ot": "0",
+                    "buzzerBeater": "0",
+                    "ticket": {
+                        "ticket_link": "https://a.data.nba.com/tickets/single/2018/0041800115/WEB_MWEB"
+                    },
+                    "period_time": {
+                        "period_value": "",
+                        "period_status": "7:00 pm ET",
+                        "game_status": "1",
+                        "game_clock": "",
+                        "total_periods": "4",
+                        "period_name": "Qtr"
+                    },
+                    "lp": {
+                        "lp_video": "true",
+                        "condensed_bb": "false",
+                        "visitor": {
+                            "audio": {
+                                "ENG": "false",
+                                "SPA": "false"
+                            },
+                            "video": {
+                                "avl": "false",
+                                "onAir": "false",
+                                "archBB": "false"
+                            }
+                        },
+                        "home": {
+                            "audio": {
+                                "ENG": "false",
+                                "SPA": "false"
+                            },
+                            "video": {
+                                "avl": "false",
+                                "onAir": "false",
+                                "archBB": "false"
+                            }
+                        }
+                    },
+                    "dl": {
+                        "link": []
+                    },
+                    "broadcasters": {
+                        "radio": {
+                            "broadcaster": [
+                                {
+                                    "scope": "local",
+                                    "home_visitor": "visitor",
+                                    "display_name": "96.9 FM The Game, AM 740 & 98.1 Salsa y"
+                                }
+                            ]
+                        },
+                        "tv": {
+                            "broadcaster": [
+                                {
+                                    "scope": "natl",
+                                    "home_visitor": "natl",
+                                    "display_name": "NBA TV"
+                                },
+                                {
+                                    "scope": "can",
+                                    "home_visitor": "can",
+                                    "display_name": "TSN"
+                                },
+                                {
+                                    "scope": "local",
+                                    "home_visitor": "home",
+                                    "display_name": "TSNN"
+                                },
+                                {
+                                    "scope": "local",
+                                    "home_visitor": "visitor",
+                                    "display_name": "Fox Sports Florida"
+                                }
+                            ]
+                        }
+                    },
+                    "playoffs": {
+                        "round": "1",
+                        "conference": "East",
+                        "series": "4",
+                        "gameId": "0041800115",
+                        "gameStatus": "1",
+                        "game_number": "5",
+                        "game_necessary_flag": "0",
+                        "home_seed": "2",
+                        "visitor_seed": "7",
+                        "home_wins": "3",
+                        "visitor_wins": "1"
+                    },
+                    "visitor": {
+                        "id": "1610612753",
+                        "team_key": "ORL",
+                        "city": "Orlando",
+                        "abbreviation": "ORL",
+                        "nickname": "Magic",
+                        "url_name": "magic",
+                        "team_code": "magic",
+                        "score": ""
+                    },
+                    "home": {
+                        "id": "1610612761",
+                        "team_key": "TOR",
+                        "city": "Toronto",
+                        "abbreviation": "TOR",
+                        "nickname": "Raptors",
+                        "url_name": "raptors",
+                        "team_code": "raptors",
+                        "score": ""
+                    }
+                },
+                {
+                    "id": "0041800125",
+                    "game_url": "20190423/BKNPHI",
+                    "season_id": "42018",
+                    "date": "20190423",
+                    "time": "2000",
+                    "arena": "Wells Fargo Center",
+                    "city": "Philadelphia",
+                    "state": "PA",
+                    "country": "USA",
+                    "home_start_date": "20190423",
+                    "home_start_time": "2000",
+                    "visitor_start_date": "20190423",
+                    "visitor_start_time": "2000",
+                    "previewAvailable": "1",
+                    "recapAvailable": "0",
+                    "notebookAvailable": "0",
+                    "tnt_ot": "0",
+                    "buzzerBeater": "0",
+                    "ticket": {
+                        "ticket_link": "https://a.data.nba.com/tickets/single/2018/0041800125/WEB_MWEB"
+                    },
+                    "period_time": {
+                        "period_value": "",
+                        "period_status": "8:00 pm ET",
+                        "game_status": "1",
+                        "game_clock": "",
+                        "total_periods": "4",
+                        "period_name": "Qtr"
+                    },
+                    "lp": {
+                        "lp_video": "true",
+                        "condensed_bb": "false",
+                        "visitor": {
+                            "audio": {
+                                "ENG": "false",
+                                "SPA": "false"
+                            },
+                            "video": {
+                                "avl": "false",
+                                "onAir": "false",
+                                "archBB": "false"
+                            }
+                        },
+                        "home": {
+                            "audio": {
+                                "ENG": "false",
+                                "SPA": "false"
+                            },
+                            "video": {
+                                "avl": "false",
+                                "onAir": "false",
+                                "archBB": "false"
+                            }
+                        }
+                    },
+                    "dl": {
+                        "link": [
+                            {
+                                "name": "TNT",
+                                "long_nm": "",
+                                "code": "tnt",
+                                "url": "http://www.tntdrama.com/watchtnt/",
+                                "mobile_url": "",
+                                "home_visitor": "natl"
+                            }
+                        ]
+                    },
+                    "broadcasters": {
+                        "radio": "",
+                        "tv": {
+                            "broadcaster": [
+                                {
+                                    "scope": "natl",
+                                    "home_visitor": "natl",
+                                    "display_name": "TNT"
+                                },
+                                {
+                                    "scope": "can",
+                                    "home_visitor": "can",
+                                    "display_name": "NBA TV Canada"
+                                },
+                                {
+                                    "scope": "local",
+                                    "home_visitor": "home",
+                                    "display_name": "NBC Sports Philadelphia"
+                                }
+                            ]
+                        }
+                    },
+                    "playoffs": {
+                        "round": "1",
+                        "conference": "East",
+                        "series": "3",
+                        "gameId": "0041800125",
+                        "gameStatus": "1",
+                        "game_number": "5",
+                        "game_necessary_flag": "0",
+                        "home_seed": "3",
+                        "visitor_seed": "6",
+                        "home_wins": "3",
+                        "visitor_wins": "1"
+                    },
+                    "visitor": {
+                        "id": "1610612751",
+                        "team_key": "BKN",
+                        "city": "Brooklyn",
+                        "abbreviation": "BKN",
+                        "nickname": "Nets",
+                        "url_name": "nets",
+                        "team_code": "nets",
+                        "score": ""
+                    },
+                    "home": {
+                        "id": "1610612755",
+                        "team_key": "PHI",
+                        "city": "Philadelphia",
+                        "abbreviation": "PHI",
+                        "nickname": "76ers",
+                        "url_name": "sixers",
+                        "team_code": "sixers",
+                        "score": ""
+                    }
+                },
+                {
+                    "id": "0041800155",
+                    "game_url": "20190423/SASDEN",
+                    "season_id": "42018",
+                    "date": "20190423",
+                    "time": "2130",
+                    "arena": "Pepsi Center",
+                    "city": "Denver",
+                    "state": "CO",
+                    "country": "USA",
+                    "home_start_date": "20190423",
+                    "home_start_time": "1930",
+                    "visitor_start_date": "20190423",
+                    "visitor_start_time": "2030",
+                    "previewAvailable": "1",
+                    "recapAvailable": "0",
+                    "notebookAvailable": "0",
+                    "tnt_ot": "0",
+                    "buzzerBeater": "0",
+                    "ticket": {
+                        "ticket_link": "https://a.data.nba.com/tickets/single/2018/0041800155/WEB_MWEB"
+                    },
+                    "period_time": {
+                        "period_value": "",
+                        "period_status": "9:30 pm ET",
+                        "game_status": "1",
+                        "game_clock": "",
+                        "total_periods": "4",
+                        "period_name": "Qtr"
+                    },
+                    "lp": {
+                        "lp_video": "true",
+                        "condensed_bb": "false",
+                        "visitor": {
+                            "audio": {
+                                "ENG": "false",
+                                "SPA": "false"
+                            },
+                            "video": {
+                                "avl": "false",
+                                "onAir": "false",
+                                "archBB": "false"
+                            }
+                        },
+                        "home": {
+                            "audio": {
+                                "ENG": "false",
+                                "SPA": "false"
+                            },
+                            "video": {
+                                "avl": "false",
+                                "onAir": "false",
+                                "archBB": "false"
+                            }
+                        }
+                    },
+                    "dl": {
+                        "link": []
+                    },
+                    "broadcasters": {
+                        "radio": {
+                            "broadcaster": [
+                                {
+                                    "scope": "local",
+                                    "home_visitor": "home",
+                                    "display_name": "KKSE-FM 92.5"
+                                }
+                            ]
+                        },
+                        "tv": {
+                            "broadcaster": [
+                                {
+                                    "scope": "natl",
+                                    "home_visitor": "natl",
+                                    "display_name": "NBA TV"
+                                },
+                                {
+                                    "scope": "can",
+                                    "home_visitor": "can",
+                                    "display_name": "TSN"
+                                },
+                                {
+                                    "scope": "local",
+                                    "home_visitor": "home",
+                                    "display_name": "Altitude"
+                                },
+                                {
+                                    "scope": "local",
+                                    "home_visitor": "visitor",
+                                    "display_name": "Fox Sports Southwest - San Antonio"
+                                }
+                            ]
+                        }
+                    },
+                    "playoffs": {
+                        "round": "1",
+                        "conference": "West",
+                        "series": "4",
+                        "gameId": "0041800155",
+                        "gameStatus": "1",
+                        "game_number": "5",
+                        "game_necessary_flag": "0",
+                        "home_seed": "2",
+                        "visitor_seed": "7",
+                        "home_wins": "2",
+                        "visitor_wins": "2"
+                    },
+                    "visitor": {
+                        "id": "1610612759",
+                        "team_key": "SAS",
+                        "city": "San Antonio",
+                        "abbreviation": "SAS",
+                        "nickname": "Spurs",
+                        "url_name": "spurs",
+                        "team_code": "spurs",
+                        "score": ""
+                    },
+                    "home": {
+                        "id": "1610612743",
+                        "team_key": "DEN",
+                        "city": "Denver",
+                        "abbreviation": "DEN",
+                        "nickname": "Nuggets",
+                        "url_name": "nuggets",
+                        "team_code": "nuggets",
+                        "score": ""
+                    }
+                },
+                {
+                    "id": "0041800165",
+                    "game_url": "20190423/OKCPOR",
+                    "season_id": "42018",
+                    "date": "20190423",
+                    "time": "2230",
+                    "arena": "Moda Center",
+                    "city": "Portland",
+                    "state": "OR",
+                    "country": "USA",
+                    "home_start_date": "20190423",
+                    "home_start_time": "1930",
+                    "visitor_start_date": "20190423",
+                    "visitor_start_time": "2130",
+                    "previewAvailable": "1",
+                    "recapAvailable": "0",
+                    "notebookAvailable": "0",
+                    "tnt_ot": "0",
+                    "buzzerBeater": "0",
+                    "ticket": {
+                        "ticket_link": "https://a.data.nba.com/tickets/single/2018/0041800165/WEB_MWEB"
+                    },
+                    "period_time": {
+                        "period_value": "",
+                        "period_status": "10:30 pm ET",
+                        "game_status": "1",
+                        "game_clock": "",
+                        "total_periods": "4",
+                        "period_name": "Qtr"
+                    },
+                    "lp": {
+                        "lp_video": "true",
+                        "condensed_bb": "false",
+                        "visitor": {
+                            "audio": {
+                                "ENG": "false",
+                                "SPA": "false"
+                            },
+                            "video": {
+                                "avl": "false",
+                                "onAir": "false",
+                                "archBB": "false"
+                            }
+                        },
+                        "home": {
+                            "audio": {
+                                "ENG": "false",
+                                "SPA": "false"
+                            },
+                            "video": {
+                                "avl": "false",
+                                "onAir": "false",
+                                "archBB": "false"
+                            }
+                        }
+                    },
+                    "dl": {
+                        "link": [
+                            {
+                                "name": "TNT",
+                                "long_nm": "",
+                                "code": "tnt",
+                                "url": "http://www.tntdrama.com/watchtnt/",
+                                "mobile_url": "",
+                                "home_visitor": "natl"
+                            }
+                        ]
+                    },
+                    "broadcasters": {
+                        "radio": {
+                            "broadcaster": [
+                                {
+                                    "scope": "local",
+                                    "home_visitor": "visitor",
+                                    "display_name": "WWLS 98.1FM OKC"
+                                },
+                                {
+                                    "scope": "local",
+                                    "home_visitor": "home",
+                                    "display_name": "Rip City Radio 620"
+                                }
+                            ]
+                        },
+                        "tv": {
+                            "broadcaster": [
+                                {
+                                    "scope": "natl",
+                                    "home_visitor": "natl",
+                                    "display_name": "TNT"
+                                },
+                                {
+                                    "scope": "can",
+                                    "home_visitor": "can",
+                                    "display_name": "TSN"
+                                },
+                                {
+                                    "scope": "local",
+                                    "home_visitor": "home",
+                                    "display_name": "NBC Sports Northwest"
+                                },
+                                {
+                                    "scope": "local",
+                                    "home_visitor": "visitor",
+                                    "display_name": "Fox Sports Oklahoma"
+                                }
+                            ]
+                        }
+                    },
+                    "playoffs": {
+                        "round": "1",
+                        "conference": "West",
+                        "series": "3",
+                        "gameId": "0041800165",
+                        "gameStatus": "1",
+                        "game_number": "5",
+                        "game_necessary_flag": "0",
+                        "home_seed": "3",
+                        "visitor_seed": "6",
+                        "home_wins": "3",
+                        "visitor_wins": "1"
+                    },
+                    "visitor": {
+                        "id": "1610612760",
+                        "team_key": "OKC",
+                        "city": "Oklahoma City",
+                        "abbreviation": "OKC",
+                        "nickname": "Thunder",
+                        "url_name": "thunder",
+                        "team_code": "thunder",
+                        "score": ""
+                    },
+                    "home": {
+                        "id": "1610612757",
+                        "team_key": "POR",
+                        "city": "Portland",
+                        "abbreviation": "POR",
+                        "nickname": "Trail Blazers",
+                        "url_name": "blazers",
+                        "team_code": "blazers",
+                        "score": ""
+                    }
+                }
+            ]
+        }
+    }
+}
