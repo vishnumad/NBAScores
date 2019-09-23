@@ -19,13 +19,13 @@ import javax.inject.Singleton
 
 @Singleton
 class GamesRepository @Inject constructor(
-        private val dataApi: DataApi,
-        private val dao: GameDao,
-        private val rawMapper: ScoreboardRawMapper,
-        private val teamInfoRepo: TeamInfoRepository,
-        @Named(ISO_FORMATTER) private val dateFormatter: DateTimeFormatter,
-        @Named(IO_THREAD) private val bgScheduler: Scheduler,
-        @Named(MAIN_THREAD) private val mainScheduler: Scheduler
+    private val dataApi: DataApi,
+    private val dao: GameDao,
+    private val rawMapper: ScoreboardRawMapper,
+    private val teamInfoRepo: TeamInfoRepository,
+    @Named(ISO_FORMATTER) private val dateFormatter: DateTimeFormatter,
+    @Named(IO_THREAD) private val bgScheduler: Scheduler,
+    @Named(MAIN_THREAD) private val mainScheduler: Scheduler
 ) {
 
     fun fetchGames(date: LocalDate): Completable {

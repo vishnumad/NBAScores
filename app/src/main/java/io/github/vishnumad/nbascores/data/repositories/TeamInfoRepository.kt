@@ -17,20 +17,20 @@ import javax.inject.Singleton
 
 @Singleton
 class TeamInfoRepository @Inject constructor(
-        private val dataApi: DataApi,
-        private val dao: TeamInfoDao,
-        private val teamsMapper: TeamRawListMapper,
-        private val configsMapper: TeamConfigRawListMapper,
-        private val teamsInfoMapper: TeamsInfoMapper,
-        @Named(IO_THREAD) private val bgScheduler: Scheduler
+    private val dataApi: DataApi,
+    private val dao: TeamInfoDao,
+    private val teamsMapper: TeamRawListMapper,
+    private val configsMapper: TeamConfigRawListMapper,
+    private val teamsInfoMapper: TeamsInfoMapper,
+    @Named(IO_THREAD) private val bgScheduler: Scheduler
 ) {
-    
+
     fun fetchTeamsInfo(seasonYear: String): Completable {
         return Single
             .zip(
-                    fetchTeams(seasonYear),
-                    fetchTeamsConfig(seasonYear),
-                    teamsInfoMapper
+                fetchTeams(seasonYear),
+                fetchTeamsConfig(seasonYear),
+                teamsInfoMapper
             )
             .doOnSuccess { teamsInfo ->
                 dao.saveTeamConfigs(teamsInfo.configs)
@@ -47,9 +47,9 @@ class TeamInfoRepository @Inject constructor(
     private fun fetchTeams(seasonYear: String): Single<List<DbTeam>> {
         return Single
             .zip(
-                    Single.just(seasonYear), // emit season year into the stream
-                    dataApi.fetchTeams(seasonYear),
-                    teamsMapper
+                Single.just(seasonYear), // emit season year into the stream
+                dataApi.fetchTeams(seasonYear),
+                teamsMapper
             )
     }
 

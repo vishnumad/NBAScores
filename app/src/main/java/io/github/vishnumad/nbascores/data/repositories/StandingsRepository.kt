@@ -20,13 +20,13 @@ private const val CONF_EAST = "east"
 private const val CONF_WEST = "west"
 
 class StandingsRepository @Inject constructor(
-        private val dataApi: DataApi,
-        private val dao: StandingsDao,
-        private val rawMapper: StandardStandingsRawMapper,
-        private val readModelMapper: StandingReadModelListMapper,
-        private val teamInfoRepo: TeamInfoRepository,
-        @Named(IO_THREAD) private val bgScheduler: Scheduler,
-        @Named(MAIN_THREAD) private val mainScheduler: Scheduler
+    private val dataApi: DataApi,
+    private val dao: StandingsDao,
+    private val rawMapper: StandardStandingsRawMapper,
+    private val readModelMapper: StandingReadModelListMapper,
+    private val teamInfoRepo: TeamInfoRepository,
+    @Named(IO_THREAD) private val bgScheduler: Scheduler,
+    @Named(MAIN_THREAD) private val mainScheduler: Scheduler
 ) {
 
     fun fetchStandings(): Completable {
@@ -54,11 +54,11 @@ class StandingsRepository @Inject constructor(
     fun getConferenceStandings(): Observable<ConferenceStandings> {
         return Observable
             .zip(
-                    getStandings(CONF_EAST),
-                    getStandings(CONF_WEST),
-                    BiFunction { east: List<TeamStanding>, west: List<TeamStanding> ->
-                        return@BiFunction ConferenceStandings(east, west)
-                    }
+                getStandings(CONF_EAST),
+                getStandings(CONF_WEST),
+                BiFunction { east: List<TeamStanding>, west: List<TeamStanding> ->
+                    return@BiFunction ConferenceStandings(east, west)
+                }
             )
             .observeOn(mainScheduler)
     }

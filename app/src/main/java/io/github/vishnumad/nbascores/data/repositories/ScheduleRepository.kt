@@ -8,8 +8,8 @@ import org.threeten.bp.LocalDate
 import javax.inject.Inject
 
 class ScheduleRepository @Inject constructor(
-        private val gamesRepo: GamesRepository,
-        private val scheduleMapper: ScheduledGameListMapper
+    private val gamesRepo: GamesRepository,
+    private val scheduleMapper: ScheduledGameListMapper
 ) {
 
     fun fetchSchedule(date: LocalDate): Completable {

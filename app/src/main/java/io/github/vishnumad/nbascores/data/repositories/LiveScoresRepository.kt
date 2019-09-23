@@ -11,9 +11,9 @@ import javax.inject.Singleton
 
 @Singleton
 class LiveScoresRepository @Inject constructor(
-        private val gamesRepo: GamesRepository,
-        private val liveScoresMapper: LiveScoreListMapper,
-        private val liveScoreMapper: LiveScoreMapper
+    private val gamesRepo: GamesRepository,
+    private val liveScoresMapper: LiveScoreListMapper,
+    private val liveScoreMapper: LiveScoreMapper
 ) {
 
     fun fetchScores(date: LocalDate): Completable {
