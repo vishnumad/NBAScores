@@ -14,6 +14,7 @@ import io.reactivex.rxkotlin.plusAssign
 import io.reactivex.rxkotlin.subscribeBy
 import io.reactivex.subjects.BehaviorSubject
 import org.threeten.bp.LocalDate
+import retrofit2.HttpException
 import javax.inject.Inject
 import javax.inject.Named
 
@@ -59,11 +60,15 @@ class ScheduleViewModel @Inject constructor(
     fun getDateSwitcherState(): LiveData<DateSwitcherState> = dateSwitcherState
 
     fun nextDate() {
-        observableDate.onNext(observableDate.value!!.plusDays(1))
+        observableDate.value?.let { date ->
+            observableDate.onNext(date.plusDays(1))
+        }
     }
 
     fun prevDate() {
-        observableDate.onNext(observableDate.value!!.minusDays(1))
+        observableDate.value?.let { date ->
+            observableDate.onNext(date.minusDays(1))
+        }
     }
 
     fun setDate(year: Int, month: Int, day: Int) {
@@ -95,13 +100,28 @@ class ScheduleViewModel @Inject constructor(
     }
 
     private fun handleError(error: Throwable) {
+        logError(error)
         when (error) {
             is NoGamesException -> scheduleState.value = ScheduleViewState.Empty
             else -> {
-                logError(error)
-                error.printStackTrace()
-                scheduleState.value =
-                    ScheduleViewState.Failure("Could not load schedule for this date. Try again later!")
+                val errorMessage = errorMessageFor(error)
+                scheduleState.value = ScheduleViewState.Failure(errorMessage)
+            }
+        }
+    }
+
+    private fun errorMessageFor(error: Throwable): String {
+        when (error) {
+            is HttpException -> {
+                return buildString {
+                    append("Error ${error.code()}")
+                    if (error.message().isNotEmpty()) {
+                        append(error.message())
+                    }
+                }
+            }
+            else -> {
+                return "Could not load schedule for this date"
             }
         }
     }

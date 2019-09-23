@@ -3,6 +3,12 @@ package io.github.vishnumad.nbascores.utils
 import android.util.Log
 import io.github.vishnumad.nbascores.BuildConfig
 
+
+/**
+ * Extension methods for easier logging
+ * Usage: logDebug("Hello, world") inside any class
+ */
+
 fun Any.logDebug(message: String) {
     if (BuildConfig.DEBUG)
         Log.d(simpleName(), message)
