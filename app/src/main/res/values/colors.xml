@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">@color/window_background</color>
-    <color name="colorPrimaryDark">@color/status_bar_background</color>
+    <color name="colorPrimaryDark">#23232b</color>
     <color name="colorAccent">#907CB6</color>
     <color name="colorAccentDark">#7B699C</color>
 
-    <color name="status_bar_background">#27272F</color>
+    <color name="status_bar_background">#1c1c21</color>
+    <color name="navigation_bar_background">@color/status_bar_background</color>
     <color name="card_background">#373741</color>
     <color name="button_outline">#4B4B58</color>
     <color name="window_background">#2b2b34</color>
     <color name="main_text">#FFFFFF</color>
     <color name="secondary_text">#A5A5AC</color>
-
 
 </resources>
