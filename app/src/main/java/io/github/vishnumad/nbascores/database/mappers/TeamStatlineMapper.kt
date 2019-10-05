@@ -28,7 +28,13 @@ class TeamStatlineMapper @Inject constructor() : Function<TeamStats, TeamStatlin
     }
 
     private fun pctString(numerator: Int, denominator: Int): String {
-        return "$numerator-$denominator(${Utils.percentage(numerator, denominator)})"
+        val pct = if (denominator > 0) {
+            "(${Utils.percentage(numerator, denominator)})"
+        } else {
+            ""
+        }
+
+        return "$numerator-$denominator$pct"
     }
 
     private fun calculatePts(ftm: Int, tpm: Int, fgm: Int): Int {
