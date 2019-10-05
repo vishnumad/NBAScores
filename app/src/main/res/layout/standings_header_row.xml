@@ -1,51 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:paddingTop="8dp"
-        android:orientation="horizontal">
+        tools:ignore="MissingPrefix">
 
 
     <TextView
             android:id="@+id/team_name"
+            fontPath="@string/font_bold"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_weight="9"
+            android:text="@string/standings_header_team"
             android:textAlignment="viewStart"
-            android:textStyle="bold"
             android:textSize="12sp"
-            android:text="@string/standings_header_team"/>
+            android:textStyle="bold" />
 
     <TextView
             android:id="@+id/win_loss"
+            fontPath="@string/font_bold"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:textStyle="bold"
+            android:text="@string/standings_header_record"
             android:textAlignment="center"
             android:textSize="12sp"
-            android:text="@string/standings_header_record"/>
+            android:textStyle="bold" />
 
     <TextView
             android:id="@+id/win_pct"
+            fontPath="@string/font_bold"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:textStyle="bold"
+            android:text="@string/standings_header_w_pct"
             android:textAlignment="viewEnd"
             android:textSize="12sp"
-            android:text="@string/standings_header_w_pct"/>
+            android:textStyle="bold" />
 
     <TextView
             android:id="@+id/games_back"
+            fontPath="@string/font_bold"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:textStyle="bold"
+            android:text="@string/standings_header_games_back"
             android:textAlignment="viewEnd"
             android:textSize="12sp"
-            android:text="@string/standings_header_games_back"/>
+            android:textStyle="bold" />
 
 </LinearLayout>

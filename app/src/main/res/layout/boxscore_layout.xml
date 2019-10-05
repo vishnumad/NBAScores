@@ -2,31 +2,32 @@
 <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
     <TextView
             android:id="@+id/team_name"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="16dp"
-            tools:text="Portland Trail Blazers"
-            android:textStyle="bold"
+            fontPath="@string/font_bold"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            tools:ignore="MissingPrefix"
+            tools:text="Portland Trail Blazers" />
 
     <HorizontalScrollView
-            android:scrollbars="none"
-            android:layout_marginBottom="16dp"
-            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:scrollbars="none">
 
         <io.github.vishnumad.nbascores.ui.common.NoScrollListView
                 android:id="@+id/boxscore_list_view"
-                tools:listitem="@layout/player_statline_layout"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/player_statline_layout" />
 
     </HorizontalScrollView>
 

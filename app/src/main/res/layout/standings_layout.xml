@@ -21,21 +21,21 @@
 
     <io.github.vishnumad.nbascores.ui.common.PageContent
             android:id="@+id/page_content"
-            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <io.github.vishnumad.nbascores.ui.common.ErrorView
                 android:id="@+id/error_view"
-                android:layout_marginBottom="?attr/actionBarSize"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:layout_marginBottom="?attr/actionBarSize" />
 
         <io.github.vishnumad.nbascores.ui.common.LoadingSpinnerView
                 android:id="@+id/loading_view"
-                android:layout_marginBottom="?attr/actionBarSize"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:layout_marginBottom="?attr/actionBarSize" />
 
         <io.github.vishnumad.nbascores.ui.standings.StandingsView
                 android:id="@+id/standings_view"

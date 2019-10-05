@@ -31,9 +31,9 @@ class PlayerStatlineView : FrameLayout {
             minutes.text = statline.min.toString()
         }
 
-        field_goals.text = "${statline.fgm} - ${statline.fga}"
-        three_pointers.text = "${statline.tpm} - ${statline.tpa}"
-        free_throws.text = "${statline.ftm} - ${statline.fta}"
+        field_goals.text = "${statline.fgm}-${statline.fga}"
+        three_pointers.text = "${statline.tpm}-${statline.tpa}"
+        free_throws.text = "${statline.ftm}-${statline.fta}"
         offensive_rebounds.text = statline.oreb.toString()
         rebounds.text = statline.reb.toString()
         assists.text = statline.ast.toString()
