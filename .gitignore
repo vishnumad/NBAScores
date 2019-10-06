@@ -1,3 +1,7 @@
+# Ignore keystore file
+keystore.properties
+
+
 # Built application files
 *.apk
 *.ap_

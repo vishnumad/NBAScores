@@ -3,11 +3,23 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
-apply from: "../ktlint.gradle"
+def keystorePropsFile = rootProject.file('keystore.properties')
+def props = new Properties()
+props.load(new FileInputStream(keystorePropsFile))
 
 android {
 
+    signingConfigs {
+        release {
+            storeFile file(props['storeFile'])
+            storePassword props['storePassword']
+            keyAlias props['keyAlias']
+            keyPassword props['keyPassword']
+        }
+    }
+
     compileSdkVersion 29
+
     defaultConfig {
         applicationId "io.github.vishnumad.nbascores"
         minSdkVersion 21
@@ -27,8 +39,9 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
 
@@ -113,6 +126,7 @@ dependencies {
     compileOnly 'com.squareup.inject:assisted-inject-annotations-dagger2:0.5.0'
     kapt 'com.squareup.inject:assisted-inject-processor-dagger2:0.5.0'
 
+    // ViewPump & Calligraphy for custom fonts
     implementation 'io.github.inflationx:calligraphy3:3.1.1'
     implementation 'io.github.inflationx:viewpump:2.0.3'
 
