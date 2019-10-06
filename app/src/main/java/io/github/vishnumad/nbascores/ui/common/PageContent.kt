@@ -5,13 +5,13 @@ import android.util.AttributeSet
 import android.view.View
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
-import android.widget.ViewFlipper
+import android.widget.ViewAnimator
 
 /**
  * A [View] that makes showing and hiding content easier. Switches between child [View]s.
  * Only one child [View] will be visible at a time.
  */
-class PageContent : ViewFlipper {
+class PageContent : ViewAnimator {
 
     constructor(context: Context) : this(context, null)
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs)
@@ -30,9 +30,6 @@ class PageContent : ViewFlipper {
 
         inAnimation = fadeIn
         outAnimation = fadeOut
-
-//        setInAnimation(context, android.R.anim.fade_in)
-//        setOutAnimation(context, android.R.anim.fade_out)
     }
 
     /**
