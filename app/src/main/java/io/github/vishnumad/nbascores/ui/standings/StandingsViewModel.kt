@@ -20,6 +20,8 @@ class StandingsViewModel @Inject constructor(
     private val disposables = CompositeDisposable()
 
     init {
+        standingsState.value = StandingsViewState.Loading
+
         disposables += standingsRepo.getConferenceStandings()
             .subscribeBy { standings ->
                 if (standings.isEmpty()) {
