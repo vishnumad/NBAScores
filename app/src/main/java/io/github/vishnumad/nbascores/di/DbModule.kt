@@ -19,6 +19,7 @@ class DbModule {
     fun appDatabase(context: Context): AppDatabase {
         return Room
             .databaseBuilder(context, AppDatabase::class.java, "scores_database.db")
+            .fallbackToDestructiveMigration()
             .build()
     }
 

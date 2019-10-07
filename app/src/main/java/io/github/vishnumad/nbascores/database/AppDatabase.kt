@@ -10,7 +10,7 @@ import io.github.vishnumad.nbascores.database.daos.TeamInfoDao
 import io.github.vishnumad.nbascores.database.entities.*
 
 @Database(
-    version = 1,
+    version = 2,
     entities = [
         DbGame::class,
         DbTeam::class,
