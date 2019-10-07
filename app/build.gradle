@@ -38,10 +38,20 @@ android {
     }
 
     buildTypes {
+
+        debug {
+            resValue("string", "launcher_label", "Scores Debug")
+            applicationIdSuffix = ".debug"
+
+            minifyEnabled false
+        }
+
         release {
+            resValue("string", "launcher_label", "Scores")
+            signingConfig signingConfigs.release
+
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
         }
     }
 
