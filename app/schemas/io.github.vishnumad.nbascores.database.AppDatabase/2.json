@@ -1,0 +1,786 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "0e7a47e916a1a8937d7fef61b9fb0774",
+    "entities": [
+      {
+        "tableName": "DbGame",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`gameId` TEXT NOT NULL, `startDate` TEXT NOT NULL, `seasonYear` TEXT NOT NULL, `seasonStage` INTEGER NOT NULL, `status` INTEGER NOT NULL, `startTimeUTC` TEXT NOT NULL, `isStartTimeTBD` INTEGER NOT NULL, `gameClock` TEXT NOT NULL, `arena` TEXT NOT NULL, `arenaCity` TEXT NOT NULL, `broadcasters` TEXT NOT NULL, `label` TEXT NOT NULL, `home_teamID` INTEGER NOT NULL, `home_tricode` TEXT NOT NULL, `home_wins` TEXT NOT NULL, `home_losses` TEXT NOT NULL, `home_seriesWins` TEXT NOT NULL, `home_seriesLosses` TEXT NOT NULL, `home_score` TEXT NOT NULL, `away_teamID` INTEGER NOT NULL, `away_tricode` TEXT NOT NULL, `away_wins` TEXT NOT NULL, `away_losses` TEXT NOT NULL, `away_seriesWins` TEXT NOT NULL, `away_seriesLosses` TEXT NOT NULL, `away_score` TEXT NOT NULL, PRIMARY KEY(`gameId`))",
+        "fields": [
+          {
+            "fieldPath": "gameId",
+            "columnName": "gameId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startDate",
+            "columnName": "startDate",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "seasonYear",
+            "columnName": "seasonYear",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "seasonStage",
+            "columnName": "seasonStage",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startTimeUTC",
+            "columnName": "startTimeUTC",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isStartTimeTBD",
+            "columnName": "isStartTimeTBD",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gameClock",
+            "columnName": "gameClock",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "arena",
+            "columnName": "arena",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "arenaCity",
+            "columnName": "arenaCity",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "broadcasters",
+            "columnName": "broadcasters",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "label",
+            "columnName": "label",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "homeTeam.teamID",
+            "columnName": "home_teamID",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "homeTeam.tricode",
+            "columnName": "home_tricode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "homeTeam.wins",
+            "columnName": "home_wins",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "homeTeam.losses",
+            "columnName": "home_losses",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "homeTeam.seriesWins",
+            "columnName": "home_seriesWins",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "homeTeam.seriesLosses",
+            "columnName": "home_seriesLosses",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "homeTeam.score",
+            "columnName": "home_score",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "awayTeam.teamID",
+            "columnName": "away_teamID",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "awayTeam.tricode",
+            "columnName": "away_tricode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "awayTeam.wins",
+            "columnName": "away_wins",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "awayTeam.losses",
+            "columnName": "away_losses",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "awayTeam.seriesWins",
+            "columnName": "away_seriesWins",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "awayTeam.seriesLosses",
+            "columnName": "away_seriesLosses",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "awayTeam.score",
+            "columnName": "away_score",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "gameId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "DbTeam",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`teamID` INTEGER NOT NULL, `seasonYear` TEXT NOT NULL, `city` TEXT NOT NULL, `fullName` TEXT NOT NULL, `tricode` TEXT NOT NULL, `nickname` TEXT NOT NULL, `urlName` TEXT NOT NULL, `confName` TEXT NOT NULL, `divName` TEXT NOT NULL, PRIMARY KEY(`teamID`))",
+        "fields": [
+          {
+            "fieldPath": "teamID",
+            "columnName": "teamID",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "seasonYear",
+            "columnName": "seasonYear",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "city",
+            "columnName": "city",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fullName",
+            "columnName": "fullName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tricode",
+            "columnName": "tricode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nickname",
+            "columnName": "nickname",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "urlName",
+            "columnName": "urlName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "confName",
+            "columnName": "confName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "divName",
+            "columnName": "divName",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "teamID"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "DbTeamConfig",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`teamID` INTEGER NOT NULL, `tricode` TEXT NOT NULL, `primaryColor` TEXT NOT NULL, PRIMARY KEY(`teamID`))",
+        "fields": [
+          {
+            "fieldPath": "teamID",
+            "columnName": "teamID",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tricode",
+            "columnName": "tricode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "primaryColor",
+            "columnName": "primaryColor",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "teamID"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "DbStanding",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`teamID` INTEGER NOT NULL, `conference` TEXT NOT NULL, `sortKey` INTEGER NOT NULL, `clinchedPlayoffs` TEXT NOT NULL, `record` TEXT NOT NULL, `homeRecord` TEXT NOT NULL, `awayRecord` TEXT NOT NULL, `winPct` TEXT NOT NULL, `gamesBack` TEXT NOT NULL, `last10` TEXT NOT NULL, `streak` TEXT NOT NULL, PRIMARY KEY(`teamID`))",
+        "fields": [
+          {
+            "fieldPath": "teamID",
+            "columnName": "teamID",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "conference",
+            "columnName": "conference",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sortKey",
+            "columnName": "sortKey",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "clinchedPlayoffs",
+            "columnName": "clinchedPlayoffs",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "record",
+            "columnName": "record",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "homeRecord",
+            "columnName": "homeRecord",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "awayRecord",
+            "columnName": "awayRecord",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "winPct",
+            "columnName": "winPct",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gamesBack",
+            "columnName": "gamesBack",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "last10",
+            "columnName": "last10",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "streak",
+            "columnName": "streak",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "teamID"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "DbGameDetails",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`gameId` TEXT NOT NULL, `status` INTEGER NOT NULL, `homePlayerStats` TEXT, `awayPlayerStats` TEXT, `arenaName` TEXT NOT NULL, `arenaCity` TEXT NOT NULL, `arenaState` TEXT NOT NULL, `homeTeamName` TEXT NOT NULL, `awayTeamName` TEXT NOT NULL, `homeId` TEXT NOT NULL, `awayId` TEXT NOT NULL, `play_description` TEXT, `play_clock` TEXT, `play_teamId` INTEGER, `home_fga` INTEGER, `home_fgm` INTEGER, `home_tpa` INTEGER, `home_tpm` INTEGER, `home_fta` INTEGER, `home_ftm` INTEGER, `home_oreb` INTEGER, `home_dreb` INTEGER, `home_reb` INTEGER, `home_ast` INTEGER, `home_stl` INTEGER, `home_blk` INTEGER, `home_pf` INTEGER, `home_tov` INTEGER, `home_fbpts` INTEGER, `home_fbptsa` INTEGER, `home_fbptsm` INTEGER, `home_pip` INTEGER, `home_pipa` INTEGER, `home_pipm` INTEGER, `home_ble` INTEGER, `home_bpts` INTEGER, `home_tf` INTEGER, `home_scp` INTEGER, `home_tmreb` INTEGER, `home_tmtov` INTEGER, `home_potov` INTEGER, `away_fga` INTEGER, `away_fgm` INTEGER, `away_tpa` INTEGER, `away_tpm` INTEGER, `away_fta` INTEGER, `away_ftm` INTEGER, `away_oreb` INTEGER, `away_dreb` INTEGER, `away_reb` INTEGER, `away_ast` INTEGER, `away_stl` INTEGER, `away_blk` INTEGER, `away_pf` INTEGER, `away_tov` INTEGER, `away_fbpts` INTEGER, `away_fbptsa` INTEGER, `away_fbptsm` INTEGER, `away_pip` INTEGER, `away_pipa` INTEGER, `away_pipm` INTEGER, `away_ble` INTEGER, `away_bpts` INTEGER, `away_tf` INTEGER, `away_scp` INTEGER, `away_tmreb` INTEGER, `away_tmtov` INTEGER, `away_potov` INTEGER, PRIMARY KEY(`gameId`))",
+        "fields": [
+          {
+            "fieldPath": "gameId",
+            "columnName": "gameId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "homePlayerStats",
+            "columnName": "homePlayerStats",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayPlayerStats",
+            "columnName": "awayPlayerStats",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "arenaName",
+            "columnName": "arenaName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "arenaCity",
+            "columnName": "arenaCity",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "arenaState",
+            "columnName": "arenaState",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "homeTeamName",
+            "columnName": "homeTeamName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "awayTeamName",
+            "columnName": "awayTeamName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "homeId",
+            "columnName": "homeId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "awayId",
+            "columnName": "awayId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastPlay.description",
+            "columnName": "play_description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lastPlay.clock",
+            "columnName": "play_clock",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lastPlay.teamId",
+            "columnName": "play_teamId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeStats.fga",
+            "columnName": "home_fga",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeStats.fgm",
+            "columnName": "home_fgm",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeStats.tpa",
+            "columnName": "home_tpa",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeStats.tpm",
+            "columnName": "home_tpm",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeStats.fta",
+            "columnName": "home_fta",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeStats.ftm",
+            "columnName": "home_ftm",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeStats.oreb",
+            "columnName": "home_oreb",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeStats.dreb",
+            "columnName": "home_dreb",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeStats.reb",
+            "columnName": "home_reb",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeStats.ast",
+            "columnName": "home_ast",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeStats.stl",
+            "columnName": "home_stl",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeStats.blk",
+            "columnName": "home_blk",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeStats.pf",
+            "columnName": "home_pf",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeStats.tov",
+            "columnName": "home_tov",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeStats.fbpts",
+            "columnName": "home_fbpts",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeStats.fbptsa",
+            "columnName": "home_fbptsa",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeStats.fbptsm",
+            "columnName": "home_fbptsm",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeStats.pip",
+            "columnName": "home_pip",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeStats.pipa",
+            "columnName": "home_pipa",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeStats.pipm",
+            "columnName": "home_pipm",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeStats.ble",
+            "columnName": "home_ble",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeStats.bpts",
+            "columnName": "home_bpts",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeStats.tf",
+            "columnName": "home_tf",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeStats.scp",
+            "columnName": "home_scp",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeStats.tmreb",
+            "columnName": "home_tmreb",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeStats.tmtov",
+            "columnName": "home_tmtov",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeStats.potov",
+            "columnName": "home_potov",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayStats.fga",
+            "columnName": "away_fga",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayStats.fgm",
+            "columnName": "away_fgm",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayStats.tpa",
+            "columnName": "away_tpa",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayStats.tpm",
+            "columnName": "away_tpm",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayStats.fta",
+            "columnName": "away_fta",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayStats.ftm",
+            "columnName": "away_ftm",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayStats.oreb",
+            "columnName": "away_oreb",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayStats.dreb",
+            "columnName": "away_dreb",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayStats.reb",
+            "columnName": "away_reb",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayStats.ast",
+            "columnName": "away_ast",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayStats.stl",
+            "columnName": "away_stl",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayStats.blk",
+            "columnName": "away_blk",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayStats.pf",
+            "columnName": "away_pf",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayStats.tov",
+            "columnName": "away_tov",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayStats.fbpts",
+            "columnName": "away_fbpts",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayStats.fbptsa",
+            "columnName": "away_fbptsa",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayStats.fbptsm",
+            "columnName": "away_fbptsm",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayStats.pip",
+            "columnName": "away_pip",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayStats.pipa",
+            "columnName": "away_pipa",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayStats.pipm",
+            "columnName": "away_pipm",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayStats.ble",
+            "columnName": "away_ble",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayStats.bpts",
+            "columnName": "away_bpts",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayStats.tf",
+            "columnName": "away_tf",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayStats.scp",
+            "columnName": "away_scp",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayStats.tmreb",
+            "columnName": "away_tmreb",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayStats.tmtov",
+            "columnName": "away_tmtov",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayStats.potov",
+            "columnName": "away_potov",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "gameId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '0e7a47e916a1a8937d7fef61b9fb0774')"
+    ]
+  }
+}
