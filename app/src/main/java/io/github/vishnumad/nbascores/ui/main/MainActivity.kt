@@ -1,13 +1,9 @@
 package io.github.vishnumad.nbascores.ui.main
 
-import android.graphics.Typeface
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.children
 import androidx.fragment.app.Fragment
-import com.google.android.material.bottomnavigation.BottomNavigationMenuView
 import io.github.vishnumad.nbascores.R
 import io.github.vishnumad.nbascores.ui.schedule.ScheduleFragment
 import io.github.vishnumad.nbascores.ui.scores.ScoresFragment
@@ -29,8 +25,6 @@ class MainActivity : AppCompatActivity() {
         // Listen for Bottom Nav Bar events
         main_nav_bar.setOnNavigationItemSelectedListener { handleNavSelect(it) }
         main_nav_bar.setOnNavigationItemReselectedListener { handleNavReselect() }
-
-        setupBottomNavFont()
 
         if (savedInstanceState == null) {
             // Start with the scores screen
@@ -58,23 +52,6 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             else -> throw IllegalArgumentException("Unknown navigation item selected")
-        }
-    }
-
-    private fun setupBottomNavFont() {
-        val defaultType: Typeface? = null
-        val boldTypeFace = Typeface.create(defaultType, Typeface.BOLD)
-        val regularTypeFace = Typeface.create(defaultType, Typeface.NORMAL)
-
-        main_nav_bar.children.forEach { child ->
-            if (child is BottomNavigationMenuView) {
-                child.children.forEach { item ->
-                    val smallLabel = item.findViewById<TextView>(com.google.android.material.R.id.smallLabel)
-                    val largeLabel = item.findViewById<TextView>(com.google.android.material.R.id.largeLabel)
-                    smallLabel.typeface = regularTypeFace
-                    largeLabel.typeface = boldTypeFace
-                }
-            }
         }
     }
 

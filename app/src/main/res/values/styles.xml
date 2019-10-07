@@ -15,6 +15,9 @@
         <item name="android:textColorTertiary">@color/main_text</item>
         <item name="primaryTextColor">@color/main_text</item>
         <item name="secondaryTextColor">@color/main_text</item>
+
+        <item name="fontFamily">@font/roboto_condensed</item>
+        <item name="android:fontFamily">@font/roboto_condensed</item>
     </style>
 
     <!-- Bottom Navigation Bar -->
@@ -36,6 +39,7 @@
 
     <style name="TextAppearance.NBAScores.BottomNavigationView.Active">
         <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <!-- DatePickerDialog -->
@@ -47,10 +51,6 @@
         <item name="colorAccent">@color/colorAccent</item>
 
         <item name="android:windowBackground">@drawable/dialog_background</item>
-
-        <!-- Window Background-->
-        <!--<item name="windowBackgroundColor">@color/window_background</item>-->
-        <!--<item name="android:windowBackground">@color/window_background</item>-->
 
         <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button.TextButton</item>
     </style>
