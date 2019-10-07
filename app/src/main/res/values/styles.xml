@@ -21,8 +21,12 @@
     <style name="Widget.NBAScores.BottomNavigation" parent="@style/Widget.MaterialComponents.BottomNavigationView.Colored">
         <item name="android:background">@color/colorPrimaryDark</item>
         <item name="labelVisibilityMode">auto</item>
-        <item name="itemTextAppearanceActive">@style/TextAppearance.NBAScores.BottomNavigationView.Active</item>
-        <item name="itemTextAppearanceInactive">@style/TextAppearance.NBAScores.BottomNavigationView</item>
+        <item name="itemTextAppearanceActive">
+            @style/TextAppearance.NBAScores.BottomNavigationView.Active
+        </item>
+        <item name="itemTextAppearanceInactive">
+            @style/TextAppearance.NBAScores.BottomNavigationView
+        </item>
         <item name="android:theme">@style/ThemeOverlay.MaterialComponents.Dark</item>
     </style>
 
@@ -32,14 +36,6 @@
 
     <style name="TextAppearance.NBAScores.BottomNavigationView.Active">
         <item name="android:textSize">14sp</item>
-    </style>
-
-    <style name="TextAppearance.BoldText" parent="android:TextAppearance">
-        <item name="fontPath">fonts/Roboto_Condensed_700.ttf</item>
-    </style>
-
-    <style name="TextAppearance.RegularText" parent="android:TextAppearance">
-        <item name="fontPath">fonts/Roboto_Condensed_regular.ttf</item>
     </style>
 
     <!-- DatePickerDialog -->

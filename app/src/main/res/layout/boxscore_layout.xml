@@ -8,12 +8,10 @@
 
     <TextView
             android:id="@+id/team_name"
-            fontPath="@string/font_bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            tools:ignore="MissingPrefix"
             tools:text="Portland Trail Blazers" />
 
     <HorizontalScrollView

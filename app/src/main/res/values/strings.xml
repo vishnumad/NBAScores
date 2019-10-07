@@ -2,9 +2,6 @@
     <!-- Application Strings -->
     <string name="app_name">Basketball Scores</string>
 
-    <string name="font_bold" translatable="false">fonts/Roboto_Condensed_700.ttf</string>
-    <string name="font_regular" translatable="false">fonts/Roboto_Condensed_regular.ttf</string>
-
     <!-- Home Navigation -->
     <string name="scores_item_label">Scores</string>
     <string name="standings_item_label">Standings</string>

@@ -2,9 +2,6 @@ package io.github.vishnumad.nbascores
 
 import android.app.Application
 import com.jakewharton.threetenabp.AndroidThreeTen
-import io.github.inflationx.calligraphy3.CalligraphyConfig
-import io.github.inflationx.calligraphy3.CalligraphyInterceptor
-import io.github.inflationx.viewpump.ViewPump
 import io.github.vishnumad.nbascores.di.AppComponent
 import io.github.vishnumad.nbascores.di.DaggerAppComponent
 
@@ -25,20 +22,6 @@ class NBAScoresApp : Application() {
 
         // Initialize ThreeTenBP
         AndroidThreeTen.init(this)
-
-        ViewPump
-            .init(
-                ViewPump.builder()
-                    .addInterceptor(
-                        CalligraphyInterceptor(
-                            CalligraphyConfig.Builder()
-                                .setDefaultFontPath("fonts/Roboto_Condensed_regular.ttf")
-                                .setFontAttrId(R.attr.fontPath)
-                                .build()
-                        )
-                    )
-                    .build()
-            )
     }
 
     companion object {

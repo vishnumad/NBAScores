@@ -1,13 +1,11 @@
 package io.github.vishnumad.nbascores.ui.details
 
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import io.github.inflationx.viewpump.ViewPumpContextWrapper
 import io.github.vishnumad.nbascores.R
 import io.github.vishnumad.nbascores.data.models.GameDetails
 import io.github.vishnumad.nbascores.di.Injector
@@ -75,10 +73,6 @@ class GameDetailsActivity : AppCompatActivity() {
                 is GameDetailsViewState.Failure -> showError(detailsState.message)
             }
         })
-    }
-
-    override fun attachBaseContext(newBase: Context) {
-        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase))
     }
 
     override fun onSupportNavigateUp(): Boolean {

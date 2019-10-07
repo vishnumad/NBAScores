@@ -1,6 +1,5 @@
 package io.github.vishnumad.nbascores.ui.main
 
-import android.content.Context
 import android.graphics.Typeface
 import android.os.Bundle
 import android.view.MenuItem
@@ -9,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.children
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationMenuView
-import io.github.inflationx.viewpump.ViewPumpContextWrapper
 import io.github.vishnumad.nbascores.R
 import io.github.vishnumad.nbascores.ui.schedule.ScheduleFragment
 import io.github.vishnumad.nbascores.ui.scores.ScoresFragment
@@ -45,10 +43,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun attachBaseContext(newBase: Context) {
-        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase))
-    }
-
     private fun handleNavSelect(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.nav_scores -> {
@@ -68,8 +62,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupBottomNavFont() {
-        val boldTypeFace = Typeface.createFromAsset(assets, getString(R.string.font_bold))
-        val regularTypeFace = Typeface.createFromAsset(assets, getString(R.string.font_regular))
+        val defaultType: Typeface? = null
+        val boldTypeFace = Typeface.create(defaultType, Typeface.BOLD)
+        val regularTypeFace = Typeface.create(defaultType, Typeface.NORMAL)
 
         main_nav_bar.children.forEach { child ->
             if (child is BottomNavigationMenuView) {

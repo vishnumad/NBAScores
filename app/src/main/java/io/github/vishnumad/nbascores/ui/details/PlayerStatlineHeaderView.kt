@@ -19,9 +19,6 @@ class PlayerStatlineHeaderView : FrameLayout {
 
     private val headerColor = ContextCompat.getColor(context, R.color.main_text)
 
-    private val boldTypeface =
-        Typeface.createFromAsset(context.assets, context.getString(R.string.font_bold))
-
     init {
         LayoutInflater.from(context)
             .inflate(R.layout.player_statline_layout, this, true)
@@ -45,7 +42,7 @@ class PlayerStatlineHeaderView : FrameLayout {
 
     private fun boldify(view: TextView, text: String) {
         with(view) {
-            typeface = boldTypeface
+            setTypeface(null, Typeface.BOLD)
             setTextColor(headerColor)
             this.text = text
         }
