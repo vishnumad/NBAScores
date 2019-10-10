@@ -10,11 +10,11 @@ import io.github.vishnumad.nbascores.data.repositories.LiveScoresRepository
 import io.github.vishnumad.nbascores.di.DATE_ET
 import io.github.vishnumad.nbascores.di.MAIN_THREAD
 import io.github.vishnumad.nbascores.ui.common.Polling
+import io.github.vishnumad.nbascores.utils.DiffFunction
 import io.github.vishnumad.nbascores.utils.RxDiffUtil
 import io.github.vishnumad.nbascores.utils.logError
 import io.reactivex.Scheduler
 import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.functions.BiFunction
 import io.reactivex.rxkotlin.plusAssign
 import io.reactivex.rxkotlin.subscribeBy
 import org.threeten.bp.LocalDate
@@ -73,12 +73,12 @@ class ScoresViewModel @Inject constructor(
     }
 
     fun onSwipeRefresh() {
-        manualRefresh()
+        fetchScores()
     }
 
     fun onReloadButtonClick() {
         scoresState.value = ScoresViewState.Loading
-        manualRefresh()
+        fetchScores()
     }
 
     override fun onCleared() {
@@ -86,13 +86,13 @@ class ScoresViewModel @Inject constructor(
         disposables.clear()
     }
 
-    private fun manualRefresh() {
+    private fun fetchScores() {
         disposables += gamesRepo.fetchScores(date)
             .subscribeBy(onError = { handleError(it) })
     }
 
     private fun liveScoreDiffer() =
-        RxDiffUtil.calculateDiff(BiFunction { old: List<LiveScore>, new ->
+        RxDiffUtil.calculateDiff(DiffFunction<LiveScore> { old, new ->
             LiveScoreDiffer(old, new)
         })
 
@@ -105,7 +105,7 @@ class ScoresViewModel @Inject constructor(
             is NoGamesException -> ScoresViewState.Empty
             else -> {
                 logError(error)
-                ScoresViewState.Failure("Could not load scores for this date. Please try again later!")
+                ScoresViewState.Failure("Could not load scores for this date")
             }
         }
     }
