@@ -28,7 +28,7 @@ const val LOCAL_ZONE = "local_zone"
 const val DATE_ET = "current_date"
 
 @AssistedModule
-@Module(includes = [AssistedInject_AppModule::class])
+@Module(includes = [AssistedInject_AppModule::class]) // Generated module from AssistedInject
 class AppModule {
 
     @Provides
@@ -40,7 +40,7 @@ class AppModule {
                     Log.i("HttpLoggingInterceptor", message)
             }
         }).apply {
-            level = HttpLoggingInterceptor.Level.BODY
+            level = HttpLoggingInterceptor.Level.BASIC
         }
 
         return OkHttpClient.Builder()
